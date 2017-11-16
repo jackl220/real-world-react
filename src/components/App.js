@@ -29,7 +29,7 @@ class App extends Component {
     this.props.onLoad(token ? agent.Auth.current() : null, token);
   }
 
-  componentWillRecieveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.redirectTo) {
       this.context.router.replace(nextProps.redirectTo);
       this.props.onRedirect();
@@ -41,7 +41,11 @@ class App extends Component {
     const appName = this.props.appName;
     return (
       <div>
-        <Header appName={appName} rootURL={true} />
+        <Header
+          appName={appName}
+          rootURL={true}
+          currentUser={this.props.currentUser}
+        />
         {this.props.children}
       </div>
     );
