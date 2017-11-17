@@ -5,7 +5,8 @@ const ArticleList = props => {
   //fetching articles
   console.log(props.articles);
   if (!props.articles) {
-    return <div className="article-preview">Loading...</div>;
+    return;
+    <div className="article-preview">Loading...</div>;
   }
 
   //no articles returned

@@ -42,6 +42,7 @@ class Login extends React.Component {
                     <input
                       onChange={this.handleInputonChange}
                       className="form-control form-control-lg"
+                      name="email"
                       type="email"
                       placeholder="Email"
                     />
@@ -51,6 +52,7 @@ class Login extends React.Component {
                     <input
                       onChange={this.handleInputonChange}
                       className="form-control form-control-lg"
+                      name="password"
                       type="password"
                       placeholder="Password"
                     />
