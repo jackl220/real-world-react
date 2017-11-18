@@ -90,7 +90,7 @@ class Register extends Component {
                     type="submit"
                     disabled={this.props.inProgress}
                   >
-                    Join Meow
+                    Join Now
                   </button>
                 </fieldset>
               </form>

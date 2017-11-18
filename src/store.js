@@ -6,19 +6,21 @@ import auth from "./reducers/auth";
 import common from "./reducers/common";
 import home from "./reducers/home";
 import settings from "./reducers/settings";
+import article from "./reducers/article";
 
 const reducer = combineReducers({
   auth,
   common,
   home,
-  settings
+  settings,
+  article
 });
 
 const store = createStore(
   reducer,
   compose(
     applyMiddleware(promiseMiddleware, localStorageMiddleware),
-    window.devtoolsExtension ? window.devToolsExtension() : f => f
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 );
 

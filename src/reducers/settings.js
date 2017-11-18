@@ -3,7 +3,7 @@ export default (state = {}, action) => {
     case "SETTINGS_SAVED":
       return {
         ...state,
-        imProgress: false,
+        inProgress: false,
         errors: action.error ? action.payload.errors : null
       };
     case "ASYNC_START":

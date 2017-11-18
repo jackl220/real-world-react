@@ -4,7 +4,7 @@ export default (state = {}, action) => {
       return {
         ...state,
         inProgress: false,
-        errors: action.error ? action.paylaod.errors : null
+        errors: action.error ? action.payload.errors : null
       };
     case "REGISTER":
       return {
@@ -16,6 +16,7 @@ export default (state = {}, action) => {
       if (action.subtype === "LOGIN" || action.subtype === "REGISTER") {
         return { ...state, inProgress: true };
       }
+      return state;
 
     default:
       return state;
