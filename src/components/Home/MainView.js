@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
+//shared component
+
 import ArticleList from "../ArticleList";
 
 const mapStateToProps = state => ({
